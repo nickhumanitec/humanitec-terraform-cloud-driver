@@ -1,0 +1,54 @@
+{
+    "id": "my-tf-cloud",
+    "type": "",
+    "account_types": [],
+    "inputs_schema": {
+        "properties": {
+            "secrets": {
+                "properties": {
+                    "data": {
+                        "description": "",
+                        "title": "Secrets",
+                        "type": "object",
+                        "uiHints": {
+                            "group": "secret",
+                            "inputType": "textarea",
+                            "order": 1
+                        }
+                    }
+                },
+                "type": "object"
+            },
+            "values": {
+                "properties": {
+                    "data": {
+                        "description": "",
+                        "title": "Values",
+                        "type": "object",
+                        "uiHints": {
+                            "group": "plaintext",
+                            "inputType": "textarea",
+                            "order": 1
+                        }
+                    }
+                },
+                "type": "object"
+            }
+        },
+        "type": "object",
+        "uiGroups": {
+            "plaintext": {
+                "order": 1,
+                "title": "Values",
+                "type": "section"
+            },
+            "secret": {
+                "order": 2,
+                "title": "Secrets",
+                "type": "section"
+            }
+        }
+    },
+    "is_public": false,
+    "target": ""
+}
