@@ -57,8 +57,7 @@ resource "humanitec_resource_definition" "my-tf-cloud-workload-resource" {
             "source_zip" : "https://github.com/nickhumanitec/humanitec-aws-examples/archive/refs/heads/main.zip"
           },
           "terraform_cloud" : {
-            "organization_name" : "my-terraform-org",
-            "project" : "my-tf-project"
+            "organization_name" : "my-terraform-org"
           },
           "terraform_variables" : [
             {
