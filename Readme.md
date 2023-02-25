@@ -100,7 +100,7 @@ curl -X POST https://api.humanitec.io/orgs/$HUMANITEC_ORG/resources/drivers \
         ]
     }
     ```
-* For Terraform: See [manifests/esource_definition.tf](manifests/resource_definition.tf) for a workload type resource.
+* For Terraform: See [manifests/resource_definition.tf](manifests/resource_definition.tf) for a workload type resource.
 * For API: Even though Terraform is recommended, below a skeleton example is provided.
 ```
 curl https://api.humanitec.io/orgs/$HUMANITEC_ORG/resources/defs \
