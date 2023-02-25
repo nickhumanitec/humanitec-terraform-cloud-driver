@@ -128,6 +128,7 @@ curl https://api.humanitec.io/orgs/$HUMANITEC_ORG/resources/defs \
 
 ### TODO
 * Automated and Manual Approvals, with VCS driven workflow vs API (and async API upload)
+* Generalize for GitHub enterprise, GitLab and other VCS
 * Schema Validation
 * Tag workspaces
 * Terraform Cloud API Backoff and retry
