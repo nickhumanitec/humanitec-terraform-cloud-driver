@@ -137,6 +137,5 @@ curl https://api.humanitec.io/orgs/$HUMANITEC_ORG/resources/defs \
 * Classic GitHub token has been tested, with full control of private repositories.
 * Terraform User API token has been tested, it must have all the permissions needed.
 * To deploy to AWS or other Cloud Provider, add the credentials within Terraform Cloud as [Variable Sets](https://developer.hashicorp.com/terraform/tutorials/cloud/cloud-multiple-variable-sets).
-* `terraform_secrets` under `secrets` is not supported. To provide secrets use the `values` section.
 * Please note that Terraform Variables must be provided with single quotes or similar for other than non integers, as specified in [https://developer.hashicorp.com/terraform/language/values/variables#using-input-variable-values](https://developer.hashicorp.com/terraform/language/values/variables#using-input-variable-values).
 * Warning: Enabling logging within the Lambda function will log secrets and sensitive information.
