@@ -16,7 +16,7 @@ Please contact your Customer Support Engineer representative for the latest vers
 * Empty Project Deletion
 
 ### Terraform Cloud Organization
-Each application is scoped to a project, projects are named `humanitec-{OrgId}-{AppId}` and within them, each resource `{EnvId}-{ResId}`.
+Each application is scoped to a project, projects are named: `humanitec-{OrgId}-{AppId}` and within them, each resource under a workspace with the following name: `{EnvId}-{ResId}`.
 
 ### Architecture
 This driver is built in Python 3.9, it runs on Amazon AWS Lambda and can be accessed over the internet using Lambda function URLs. The driver does not permissions other than access to CloudWatch.
