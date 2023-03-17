@@ -164,6 +164,7 @@ def lambda_handler(event, context):
 
     action = event["requestContext"]["http"]["method"]
     if action not in ["PUT", "DELETE"]:
+        logger.debug("## lambda_handler error in method")
         return get_response(cookie="", body=get_error(message="bad request"), status=400)
     id = event["requestContext"]["http"]["path"][1:]
     cookie = event.get("headers", {}).get("humanitec-driver-cookie", "")
