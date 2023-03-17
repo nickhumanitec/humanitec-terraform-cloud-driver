@@ -68,7 +68,7 @@ curl -X POST https://api.humanitec.io/orgs/$HUMANITEC_ORG/resources/drivers \
         },
         "source":{
             "branch":"main",
-            "path":"humanitec-aws-examples/dummy/",
+            "path":"humanitec-aws-examples-main/terraform-training/echo",
             "source_commit":"https://api.github.com/repos/nickhumanitec/humanitec-aws-examples/commits?sha=main",
             "source_zip":"https://github.com/nickhumanitec/humanitec-aws-examples/archive/refs/heads/main.zip"
         },
@@ -79,10 +79,6 @@ curl -X POST https://api.humanitec.io/orgs/$HUMANITEC_ORG/resources/drivers \
             {
                 "key":"my_input",
                 "value":"\"plaintext value\""
-            },
-            {
-                "key":"my_secret",
-                "value":"\"my secret\""
             }
         ]
     }

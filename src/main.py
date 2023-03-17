@@ -195,11 +195,10 @@ def lambda_handler(event, context):
         terraform_variables = driver["values"].get("data", {}).get(
             "terraform_variables", [])
 
-        # This does not work yet, API issue decoding payloads
-        # terraform_secrets = driver["secrets"].get("data", {}).get(
-        #     "terraform_secrets", [])
+        terraform_secrets = driver["secrets"].get("data", {}).get(
+            "terraform_secrets", [])
 
-        # terraform_variables = terraform_variables + terraform_secrets
+        terraform_variables = terraform_variables + terraform_secrets
 
         # update or create cookie with the latest token and info, this is used later on for the DELETE event,
         # api v1 does not send tokens and information to perform a delete
