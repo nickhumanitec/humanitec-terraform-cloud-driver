@@ -215,7 +215,7 @@ def lambda_handler(event, context):
             cookie = {
                 "tfc_organization_name": tfcloud["organization_name"],
                 "tfc_project_name": ("humanitec-{org}-{app}".format(org=clean_name(humanitec["org"]), app=clean_name(humanitec["app"]))).lower(),
-                "tfc_workspace_name": ("{env}-{res}".format(env=clean_name(humanitec["env"]), res=clean_name(humanitec["res"]))).lower(),
+                "tfc_workspace_name": ("{env}-{res}-{id}".format(env=clean_name(humanitec["env"]), res=clean_name(humanitec["res"]), id=id)).lower(),
                 "tfc_token": secrets["tfc_token"],
                 "github_token": secrets["github_token"],
                 "tfc_run_id": ""
