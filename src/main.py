@@ -105,7 +105,25 @@ def main(local, terraform_variables, cookie):
                                         cookie=cookie, body=body, status=status)
 
             elif status == 400:
-                return get_response(cookie=cookie, body=get_error(message="update: failed"), status=status)
+                # todo DRY
+                _, current_commit = tf.get_workspace_variable(
+                    "HUMANITEC_SHA")
+
+                if incoming_commit != current_commit:
+                    updateCode = True
+
+                # latest run finished, do I have diff variables? reRun
+                current_variables = latest_run.get(
+                    "data", {})["attributes"]["variables"]
+                ddiff = deepdiff.DeepDiff(
+                    terraform_variables, current_variables, ignore_order=True)
+                if ddiff != {}:
+                    reRun = True
+
+                if reRun or updateCode:
+                    pass
+                else:
+                    return get_response(cookie=cookie, body=get_error(message="update: failed"), status=status)
             else:
                 return get_response(cookie=cookie, body=get_wait(status="update: waiting to finish an update"), status=202)
 
