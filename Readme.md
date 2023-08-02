@@ -1,5 +1,7 @@
 # Humanitec reference Terraform Cloud Driver
 
+## Aug 2, 2023: This driver must be updated to the new API version
+
 ## Background
 This repository contains an unsupported experimental reference implementation for Terraform Cloud, this can used as an starting point with env0, Scalr, Spacelift and the similar services to manage your Infrastructure.
 
